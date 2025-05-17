@@ -2,6 +2,7 @@ _exclude:
   - ".git"
   - "copier.yml"
   - "LICENSE"
+  - "README.md"
   
 project_name:
   type: str

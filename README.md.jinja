@@ -1,0 +1,64 @@
+# {{ project_name }}
+
+> Documentation site powered by [DraftMk](https://github.com/jonmatum/draftmk-cli)
+
+## Overview
+
+This project was scaffolded using the [DraftMk CLI](https://github.com/jonmatum/draftmk-cli).  
+It supports both public and internal documentation via [MkDocs](https://www.mkdocs.org/) and Docker.
+
+## Getting Started
+
+1. Install dependencies:
+
+```bash
+docker --version
+docker-compose --version
+```
+
+2. Start the environment:
+
+```bash
+draftmk up
+```
+
+3. Open your browser to:
+
+```
+http://localhost:${FRONTEND_PORT:-3000}
+```
+
+## Project Structure
+
+```text
+.
+├── .draftmk/
+│   ├── config/
+│   ├── site/
+│   ├── logs/
+├── docs/
+│   ├── index.md        # Public homepage
+│   └── internal/
+│       └── index.md    # Internal-only content
+├── .env                # Ports and environment info
+└── README.md
+```
+
+## Useful Commands
+
+- `draftmk init` – initialize a new project
+- `draftmk up`   – launch Docker services
+- `draftmk view` – open browser
+- `draftmk logs` – tail recent logs
+- `draftmk stop` – shut down services
+
+## Configuration
+
+MkDocs config files live in `.draftmk/config/`:
+
+- `mkdocs.public.yml`
+- `mkdocs.internal.yml`
+
+---
+
+This is just a starting point. Happy documenting!
